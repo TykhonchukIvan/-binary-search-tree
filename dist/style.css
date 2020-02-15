@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.counter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+.factorial {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+.fibonacci {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
