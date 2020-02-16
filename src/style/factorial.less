@@ -1,0 +1,42 @@
+.factorial {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: @font;
+  height: 5vh;
+  &__name{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  &__display{
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: @btn-bg-input;
+    color: white;
+  }
+  &__result{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  &__btn{
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    border: 0;
+    user-select: none;
+    outline:none;
+    cursor: pointer;
+    background-color: @btn-bg-color;
+    color: white;
+    font-size: 18px;
+  }
+  &__btn:hover{
+    background-color: @btn-bg-hover-color;
+    color: @btn-text-color;
+    border: 1px solid white;
+    padding: 0 9px 0 9px;
+  }
+};
