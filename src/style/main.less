@@ -10,10 +10,11 @@ input{
 .container {
   width: 800px;
   margin: 0 auto;
-  background-color: cadetblue;
+  background-image: @gradient-header;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  color: white;
 }
 
 @font: 'Roboto', sans-serif;
@@ -25,3 +26,21 @@ input{
 @import "binary-tree.less";
 @import "linked-list.less";
 @import "search-time.less";
+
+@gradient-header:  linear-gradient(to top right, rgb(23, 29, 99), rgb(40, 37, 94), rgb(58, 44, 89), rgb(75, 52, 84),
+rgb(92, 60, 79), rgb(110, 67, 74), rgb(127, 75, 70), rgb(145, 82, 65), rgb(162, 90, 60), rgb(179, 98, 55),
+rgb(197, 105, 50), rgb(214, 113, 45));
+
+@btn-bg-color: rgb(23, 29, 99);
+@btn-bg-hover-color: rgba(255, 147, 0, 0.87);
+@btn-text-color: rgb(23, 29, 99);
+@btn-bg-input: rgb(92, 60, 79);
+
+input {
+  outline:none;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1em;
+}
