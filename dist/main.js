@@ -81,24 +81,128 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_main_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _style_main_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_main_less__WEBPACK_IMPORTED_MODULE_0__);
+
+// EXTERNAL MODULE: ./src/style/main.less
+var main = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./src/js/model.js
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Model = function Model() {
+  _classCallCheck(this, Model);
+
+  this._counterBtn = document.getElementById('counterBtn');
+  this._counterDisplay = document.getElementById('counterDisplay');
+  this._factorialValue = document.getElementById('factorialValue');
+  this._factorialDis = document.getElementById('factorialDis');
+  this._factorialBtn = document.getElementById('factorialBtn');
+  this._fibonacciValue = document.getElementById('fibonacciValue');
+  this._fibonacciDis = document.getElementById('fibonacciDis');
+  this._fibonacciBtn = document.getElementById('fibonacciBtn');
+};
+
+/* harmony default export */ var model = (Model);
+// CONCATENATED MODULE: ./src/js/logic.js
+function logic_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+var logic_Logic = function Logic() {
+  var _this = this;
+
+  logic_classCallCheck(this, Logic);
+
+  _defineProperty(this, "counter", function () {
+    _this.model._counterBtn.addEventListener('click', function () {
+      _this.model._counterDisplay.innerHTML = count();
+    });
+
+    var count = makeCounter();
+
+    function makeCounter() {
+      function counter() {
+        console.log(counter.currentCount);
+        return counter.currentCount++;
+      }
+
+      counter.currentCount = 1;
+      return counter;
+    }
+  });
+
+  _defineProperty(this, "factorial", function () {
+    var factorialValue = _this.model._factorialValue;
+    var factorialDis = _this.model._factorialDis;
+
+    function factorial(n) {
+      if (n === 1) return n;else return n * factorial(n - 1);
+    }
+
+    _this.model._factorialBtn.addEventListener('click', function () {
+      var n = factorialValue.value;
+      if (n === '') return factorialDis.innerHTML = 'Введите число в поле слева';
+      factorialDis.innerHTML = "\u0424\u0430\u043A\u0442\u043E\u0440\u0438\u0430\u043B  ".concat(n, " = ").concat(factorial(n));
+    });
+  });
+
+  _defineProperty(this, "fibonacci", function () {
+    var fibonacci = function fibonacci(n) {
+      var first = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var second = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+      if (n <= 2) return second + first;else {
+        var count = second + first;
+        first = second;
+        second = count;
+        n--;
+        return fibonacci(n, first, second);
+      }
+    };
+
+    var fibonacciBtn = _this.model._fibonacciBtn;
+    var fibonacciValue = _this.model._fibonacciValue;
+    var fibonacciDis = _this.model._fibonacciDis;
+    fibonacciBtn.addEventListener('click', function () {
+      if (fibonacciValue.value === '') {
+        return fibonacciDis.innerHTML = 'Введите число в поле слева';
+      }
+
+      fibonacciDis.innerHTML = fibonacci(parseInt(fibonacciValue.value));
+    });
+  });
+
+  this.model = new model();
+};
+
+/* harmony default export */ var js_logic = (logic_Logic);
+// CONCATENATED MODULE: ./src/index.js
+
+
+
+var src_init = function init() {
+  var logic = new js_logic();
+  logic.counter();
+  logic.factorial();
+  logic.fibonacci();
+};
+
+src_init();
 
 /***/ })
 /******/ ]);
