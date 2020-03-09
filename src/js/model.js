@@ -21,8 +21,23 @@ class Model {
         this._binaryTreeDisplay = document.getElementById('binaryTreeDisplay');
         this._binaryTreeInputPush = document.getElementById('binaryTreeInputPush');
         this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
+    }
+}
+export default Model;
+
+class BinnaryTree {
+    constructor(){
+        this.root = null;
+    }
+}
+export default BinnaryTree;
+
+class CreateTreeNode {
+    constructor(data){
+        this.left = null;
+        this.right = null;
+        this.data = data;
 
     }
 }
-
-export default Model;
+export default CreateTreeNode;

@@ -1,15 +1,11 @@
 import Model from './model.js';
 
+
 class Logic {
     constructor() {
         this.model = new Model();
 
-        this.root = null;
 
-
-        this.left = null;
-        this.right = null;
-        this.data = data;
     }
 
     counter = () => {
@@ -119,6 +115,8 @@ class Logic {
         let binaryTreeDisplay = this.model._binaryTreeDisplay;
         let binaryTreeInputPush = this.model._binaryTreeInputPush;
         let binaryTreeInputFind = this.model._binaryTreeInputFind;
+
+
 
 
     }
