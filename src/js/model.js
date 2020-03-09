@@ -1,15 +1,27 @@
 class Model {
-    constructor(){
+    constructor() {
         this._counterBtn = document.getElementById('counterBtn');
         this._counterDisplay = document.getElementById('counterDisplay');
 
-        this._factorialValue = document.getElementById('factorialValue');
         this._factorialDis = document.getElementById('factorialDis');
         this._factorialBtn = document.getElementById('factorialBtn');
+        this._factorialValue = document.getElementById('factorialValue');
 
-        this._fibonacciValue = document.getElementById('fibonacciValue');
         this._fibonacciDis = document.getElementById('fibonacciDis');
         this._fibonacciBtn = document.getElementById('fibonacciBtn');
+        this._fibonacciValue = document.getElementById('fibonacciValue');
+
+        this._array = [];
+        this._binarySearchBtn = document.getElementById('binarySearchBtn');
+        this._binarySearchDisplay = document.getElementById('binarySearchDisplay');
+        this._binarySearchInputHow = document.getElementById('binarySearchInputHow');
+        this._binarySearchInputWhich = document.getElementById('binarySearchInputWhich');
+
+        this._binaryTreeBtn = document.getElementById('binaryTreeBtn');
+        this._binaryTreeDisplay = document.getElementById('binaryTreeDisplay');
+        this._binaryTreeInputPush = document.getElementById('binaryTreeInputPush');
+        this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
+
     }
 }
 

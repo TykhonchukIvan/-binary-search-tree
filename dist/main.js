@@ -114,6 +114,11 @@ var Model = function Model() {
   this._fibonacciValue = document.getElementById('fibonacciValue');
   this._fibonacciDis = document.getElementById('fibonacciDis');
   this._fibonacciBtn = document.getElementById('fibonacciBtn');
+  this._binarySearchInputHow = document.getElementById('binarySearchInputHow');
+  this._binarySearchInputWhich = document.getElementById('binarySearchInputWhich');
+  this._binarySearchDisplay = document.getElementById('binarySearchDisplay');
+  this._binarySearchBtn = document.getElementById('binarySearchBtn');
+  this._array = [];
 };
 
 /* harmony default export */ var model = (Model);
@@ -187,6 +192,48 @@ var logic_Logic = function Logic() {
     });
   });
 
+  _defineProperty(this, "binarySearch", function () {
+    function binarySearch(el, arr) {
+      console.log(arr);
+      var search = Math.floor(arr.length / 2);
+      console.log(search);
+      console.log('5');
+
+      if (el == arr[search]) {
+        return arr[search];
+      }
+
+      if (arr[search] < el) {
+        return binarySearch(el, arr.slice(search));
+      }
+
+      if (arr[search] > el) {
+        return binarySearch(el, arr.slice(0, search));
+      }
+    }
+
+    function addToArray(n, arr) {
+      for (var i = 1; i <= n; i++) {
+        arr.push(i);
+      }
+
+      return arr;
+    }
+
+    var binarySearchInputHow = _this.model._binarySearchInputHow;
+    var binarySearchInputWhich = _this.model._binarySearchInputWhich;
+    var binarySearchDisplay = _this.model._binarySearchDisplay;
+    var binarySearchBtn = _this.model._binarySearchBtn;
+    var array = _this.model._array;
+    binarySearchBtn.addEventListener('click', function () {
+      var witch = binarySearchInputWhich.value;
+      var how = binarySearchInputHow.value;
+      if (witch == '' || how == '') return binarySearchDisplay.innerHTML = 'Не заполнено какое-либо из полей слева';
+      addToArray(how, array);
+      binarySearchDisplay.innerHTML = 'Число ' + binarySearch(witch, array) + ' найдено';
+    });
+  });
+
   this.model = new model();
 };
 
@@ -200,6 +247,7 @@ var src_init = function init() {
   logic.counter();
   logic.factorial();
   logic.fibonacci();
+  logic.binarySearch();
 };
 
 src_init();

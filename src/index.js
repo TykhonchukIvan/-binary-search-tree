@@ -8,6 +8,7 @@ const init = () => {
     logic.factorial();
     logic.fibonacci();
     logic.binarySearch();
+    logic.binaryTree();
 };
 
 init();
