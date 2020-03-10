@@ -1,16 +1,14 @@
-import Model from './model.js';
+import { Model } from './model.js';
 
 
 class Logic {
     constructor() {
-        this.model = new Model();
-
-
+        this._model = new Model();
     }
 
     counter = () => {
-        this.model._counterBtn.addEventListener('click', () => {
-            this.model._counterDisplay.innerHTML = count();
+        this._model._counterBtn.addEventListener('click', () => {
+            this._model._counterDisplay.innerHTML = count();
         });
         let count = makeCounter();
 
@@ -27,15 +25,15 @@ class Logic {
 
     factorial = () => {
 
-        let factorialValue = this.model._factorialValue;
-        let factorialDis = this.model._factorialDis;
+        let factorialValue = this._model._factorialValue;
+        let factorialDis = this._model._factorialDis;
 
         function factorial(n) {
             if (n === 1) return n;
             else return n * factorial(n - 1);
         }
 
-        this.model._factorialBtn.addEventListener('click', function () {
+        this._model._factorialBtn.addEventListener('click', function () {
             let n = factorialValue.value;
             if (n === '') return factorialDis.innerHTML = 'Введите число в поле слева';
             factorialDis.innerHTML = `Факториал  ${n} = ${factorial(n)}`;
@@ -55,9 +53,9 @@ class Logic {
             }
         };
 
-        let fibonacciBtn = this.model._fibonacciBtn;
-        let fibonacciValue = this.model._fibonacciValue;
-        let fibonacciDis = this.model._fibonacciDis;
+        let fibonacciBtn = this._model._fibonacciBtn;
+        let fibonacciValue = this._model._fibonacciValue;
+        let fibonacciDis = this._model._fibonacciDis;
 
         fibonacciBtn.addEventListener('click', function () {
             if (fibonacciValue.value === '') {
@@ -70,10 +68,10 @@ class Logic {
     binarySearch = () => {
 
         function binarySearch(el, arr) {
-            console.log(arr);
+
             let search = Math.floor(arr.length / 2);
             console.log(search);
-            console.log('5')
+
             if (el == arr[search]) {
                 return arr[search];
             }
@@ -93,11 +91,11 @@ class Logic {
             return arr;
         }
 
-        let binarySearchInputHow = this.model._binarySearchInputHow;
-        let binarySearchInputWhich = this.model._binarySearchInputWhich;
-        let binarySearchDisplay = this.model._binarySearchDisplay;
-        let binarySearchBtn = this.model._binarySearchBtn;
-        let array = this.model._array;
+        let binarySearchInputHow = this._model._binarySearchInputHow;
+        let binarySearchInputWhich = this._model._binarySearchInputWhich;
+        let binarySearchDisplay = this._model._binarySearchDisplay;
+        let binarySearchBtn = this._model._binarySearchBtn;
+        let array = this._model._array;
 
 
         binarySearchBtn.addEventListener('click', function () {
@@ -109,17 +107,6 @@ class Logic {
         });
     };
 
-    binaryTree = () => {
-
-        let binaryTreeBtn = this.model._binaryTreeBtn;
-        let binaryTreeDisplay = this.model._binaryTreeDisplay;
-        let binaryTreeInputPush = this.model._binaryTreeInputPush;
-        let binaryTreeInputFind = this.model._binaryTreeInputFind;
-
-
-
-
-    }
 }
 
 export default Logic;
