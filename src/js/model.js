@@ -1,4 +1,4 @@
-class Model {
+export class Model {
     constructor() {
         this._counterBtn = document.getElementById('counterBtn');
         this._counterDisplay = document.getElementById('counterDisplay');
@@ -17,27 +17,38 @@ class Model {
         this._binarySearchInputHow = document.getElementById('binarySearchInputHow');
         this._binarySearchInputWhich = document.getElementById('binarySearchInputWhich');
 
+        this._root = null;
         this._binaryTreeBtn = document.getElementById('binaryTreeBtn');
         this._binaryTreeDisplay = document.getElementById('binaryTreeDisplay');
         this._binaryTreeInputPush = document.getElementById('binaryTreeInputPush');
         this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
     }
 }
-export default Model;
 
-class BinnaryTree {
-    constructor(){
+export class BinaryTree {
+    constructor() {
         this.root = null;
     }
 }
-export default BinnaryTree;
 
-class CreateTreeNode {
-    constructor(data){
+
+export class CreateTreeNode {
+    constructor(data) {
         this.left = null;
         this.right = null;
         this.data = data;
 
     }
 }
-export default CreateTreeNode;
+
+export class RandomNums {
+
+    randomNums = (quantity) => {
+        let n = [];
+        for(let i =0; i< quantity; i++){
+            n.push(Math.floor(Math.random()* 10000))
+        }
+        return n;
+    }
+}
+
