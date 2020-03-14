@@ -24,31 +24,3 @@ export class Model {
         this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
     }
 }
-
-export class BinaryTree {
-    constructor() {
-        this.root = null;
-    }
-}
-
-
-export class CreateTreeNode {
-    constructor(data) {
-        this.left = null;
-        this.right = null;
-        this.data = data;
-
-    }
-}
-
-export class RandomNums {
-
-    randomNums = (quantity) => {
-        let n = [];
-        for(let i =0; i< quantity; i++){
-            n.push(Math.floor(Math.random()* 10000))
-        }
-        return n;
-    }
-}
-

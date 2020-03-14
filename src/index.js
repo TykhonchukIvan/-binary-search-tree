@@ -1,5 +1,5 @@
 import './style/main.less';
-import { Counter, Factorial, Fibonacci, BinarySearch, BinaryTreelogic } from './js/logic';
+import { Counter, Factorial, Fibonacci, BinarySearch } from './js/logic';
 
 
 const init = () => {
@@ -7,13 +7,13 @@ const init = () => {
     const factorial = new Factorial();
     const fibonacci = new Fibonacci();
     const binarySearch = new BinarySearch();
-    const binaryTreelogic = new BinaryTreelogic();
+
 
     counter.counterMethod();
     factorial.factorialMethod();
     fibonacci.fibonacciMethod();
     binarySearch.binarySearchMethod();
-    binaryTreelogic.binaryTreeMethod()
+
 };
 
 init();
