@@ -1,5 +1,6 @@
 export class Model {
     constructor() {
+
         this._counterBtn = document.getElementById('counterBtn');
         this._counterDisplay = document.getElementById('counterDisplay');
 
@@ -17,10 +18,29 @@ export class Model {
         this._binarySearchInputHow = document.getElementById('binarySearchInputHow');
         this._binarySearchInputWhich = document.getElementById('binarySearchInputWhich');
 
-        this._root = null;
+
         this._binaryTreeBtn = document.getElementById('binaryTreeBtn');
         this._binaryTreeDisplay = document.getElementById('binaryTreeDisplay');
         this._binaryTreeInputPush = document.getElementById('binaryTreeInputPush');
         this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
+
+
+        this._linkedListInputPush = document.getElementById('linkedListInputPush');
+        this._linkedListInputFind = document.getElementById('linkedListInputFind');
+        this._linkedListDisplay = document.getElementById('linkedListDisplay');
+        this._linkedListBtn = document.getElementById('linkedListBtn');
+
+        this._binaryTreeCompareDisplay = document.getElementById('binaryTreeCompareDisplay');
+        this._linkedListCompareDisplay = document.getElementById('linkedListCompareDisplay');
+
+    }
+
+    randomNums = (quantity) => {
+        let n = [];
+        for(let i =0; i< quantity; i++){
+            n.push(Math.floor(Math.random()* 10000))
+        }
+        return n;
     }
 }
+

@@ -1,4 +1,4 @@
-import {Model, CreateTreeNode, BinaryTree, RandomNums} from './model.js';
+import { Model } from './model.js';
 
 export class Counter {
     constructor() {
