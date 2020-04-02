@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+input {
+  text-align: center;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  background-image: linear-gradient(to top right, #171d63, #28255e, #3a2c59, #4b3454, #5c3c4f, #6e434a, #7f4b46, #915241, #a25a3c, #b36237, #c56932, #d6712d);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+.counter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+  transition: 0.5s;
+}
+.counter__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.counter__display {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.counter__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.counter__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+.factorial {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+}
+.factorial__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.factorial__display {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #5c3c4f;
+  color: white;
+}
+.factorial__result {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.factorial__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.factorial__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+.fibonacci {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+}
+.fibonacci__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.fibonacci__display {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #5c3c4f;
+  color: white;
+}
+.fibonacci__result {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.fibonacci__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.fibonacci__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+.binary-search {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+}
+.binary-search__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.binary-search__amount {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #5c3c4f;
+  color: white;
+}
+.binary-search__target {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #5c3c4f;
+  color: white;
+}
+.binary-search__display {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.binary-search__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.binary-search__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+.binary-tree {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+}
+.binary-tree__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.binary-tree__input {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #5c3c4f;
+  color: white;
+}
+.binary-tree__display {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.binary-tree__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.binary-tree__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+.linked-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+}
+.linked-list__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.linked-list__input {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #5c3c4f;
+  color: white;
+}
+.linked-list__display {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.linked-list__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.linked-list__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+.search-time {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+}
+.search-time__name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.search-time__text {
+  display: flex;
+  align-items: center;
+}
+.search-time__btn {
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  border: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #171d63;
+  color: white;
+  font-size: 18px;
+}
+.search-time__btn:hover {
+  background-color: rgba(255, 147, 0, 0.87);
+  color: #171d63;
+  border: 1px solid white;
+  padding: 0 9px 0 9px;
+}
+input {
+  outline: none;
+}
+::placeholder {
+  color: white;
+  font-size: 1em;
+}
+

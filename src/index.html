@@ -3,8 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div class="container">
+    <div class="counter">
+        <div class="counter__name">1</div>
+        <div class="counter__display" id="counterDisplay">0</div>
+        <button id="counterBtn" class="counter__btn"> Click </button>
+    </div>
+    <div class="factorial">
+        <div class="factorial__name">2</div>
+        <input type="text" id="factorialValue" placeholder="Factorial" class="factorial__display">
+        <div id="factorialDis" class="factorial__result"></div>
+        <button id="factorialBtn" class="factorial__btn"> Click </button>
+    </div>
+    <div class="fibonacci">
+        <div class="fibonacci__name">3</div>
+        <input type="text" id="fibonacciValue" placeholder="Fibonacci" class="fibonacci__display">
+        <div id="fibonacciDis" class="fibonacci__result"></div>
+        <button id="fibonacciBtn" class="fibonacci__btn"> Click </button>
+    </div>
+    <div class="binary-search">
+        <div class="binary-search__name">4</div>
+        <input type="text"  id="binarySearchInputHow" placeholder="Amount" class="binary-search__amount">
+        <input type="text"  id="binarySearchInputWhich" placeholder="Target" class="binary-search__target">
+        <div  id="binarySearchDisplay" class="binary-search__display"></div>
+        <button  id="binarySearchBtn" class="binary-search__btn"> Click </button>
+    </div>
+    <div class="binary-tree">
+        <div class="binary-tree__name">5</div>
+        <input type="text" id="binaryTreeInputPush" placeholder="Количество елементов" class="binary-tree__input">
+        <input type="text" id="binaryTreeInputFind" placeholder="Искаемий елемент" class="binary-tree__input">
+        <div  id="binaryTreeDisplay" class="binary-tree__display"></div>
+        <button  id="binaryTreeBtn" class="binary-tree__btn"> Click </button>
+    </div>
+    <div class="linked-list">
+        <div class="linked-list__name">6</div>
+        <input type="text"  id="linkedListInputPush" placeholder="Количество елементов" class="linked-list__input">
+        <input type="text"  id="linkedListInputFind" placeholder="Искаемий елемент" class="linked-list__input">
+        <div  id="linkedListDisplay" class="linked-list__display"></div>
+        <button  id="linkedListBtn" class="linked-list__btn"> Click </button>
+    </div>
+    <div class="search-time">
+        <div class="search-time__name">7</div>
+        <div  id="binaryTreeCompareDisplay" class="search-time__text">
+            Время поиска Binary tree collection
+        </div>
+        <div  id="linkedListCompareDisplay" class="search-time__text">
+            Время поиска Linked List collection
+        </div>
+        <button id="reset" class="search-time__btn">Reset</button>
+    </div>
+</div>
 </body>
 </html>
