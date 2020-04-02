@@ -9,14 +9,15 @@ export class Counter {
         this._model._counterBtn.addEventListener('click', () => {
             this._model._counterDisplay.innerHTML = count();
         });
-        let count = makeCounter();
 
+        let count = makeCounter();
         function makeCounter() {
+
             function counter() {
                 return counter.currentCount++;
             }
-
             counter.currentCount = 1;
+
             return counter;
         }
     }

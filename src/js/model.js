@@ -18,21 +18,20 @@ export class Model {
         this._binarySearchInputHow = document.getElementById('binarySearchInputHow');
         this._binarySearchInputWhich = document.getElementById('binarySearchInputWhich');
 
-
         this._binaryTreeBtn = document.getElementById('binaryTreeBtn');
         this._binaryTreeDisplay = document.getElementById('binaryTreeDisplay');
         this._binaryTreeInputPush = document.getElementById('binaryTreeInputPush');
         this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
 
-
+        this._linkedListBtn = document.getElementById('linkedListBtn');
+        this._linkedListDisplay = document.getElementById('linkedListDisplay');
         this._linkedListInputPush = document.getElementById('linkedListInputPush');
         this._linkedListInputFind = document.getElementById('linkedListInputFind');
-        this._linkedListDisplay = document.getElementById('linkedListDisplay');
-        this._linkedListBtn = document.getElementById('linkedListBtn');
 
         this._binaryTreeCompareDisplay = document.getElementById('binaryTreeCompareDisplay');
         this._linkedListCompareDisplay = document.getElementById('linkedListCompareDisplay');
 
+        this._resetBtn = document.getElementById('reset');
     }
 
     randomNums = (quantity) => {
@@ -43,4 +42,3 @@ export class Model {
         return n;
     }
 }
-

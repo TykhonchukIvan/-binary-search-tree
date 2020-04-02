@@ -135,12 +135,13 @@ var Model = function Model() {
   this._binaryTreeDisplay = document.getElementById('binaryTreeDisplay');
   this._binaryTreeInputPush = document.getElementById('binaryTreeInputPush');
   this._binaryTreeInputFind = document.getElementById('binaryTreeInputFind');
+  this._linkedListBtn = document.getElementById('linkedListBtn');
+  this._linkedListDisplay = document.getElementById('linkedListDisplay');
   this._linkedListInputPush = document.getElementById('linkedListInputPush');
   this._linkedListInputFind = document.getElementById('linkedListInputFind');
-  this._linkedListDisplay = document.getElementById('linkedListDisplay');
-  this._linkedListBtn = document.getElementById('linkedListBtn');
   this._binaryTreeCompareDisplay = document.getElementById('binaryTreeCompareDisplay');
   this._linkedListCompareDisplay = document.getElementById('linkedListCompareDisplay');
+  this._resetBtn = document.getElementById('reset');
 };
 // CONCATENATED MODULE: ./src/js/logic.js
 function logic_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -854,17 +855,74 @@ BinnaryTree.prototype.push = function (el, nextStep) {
 };
 
 /* harmony default export */ var logic_binary_tree = (logic_binary_tree_LogicBinaryTree);
+// CONCATENATED MODULE: ./src/js/reset.js
+function reset_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function reset_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var reset_Reset = function Reset() {
+  var _this = this;
+
+  reset_classCallCheck(this, Reset);
+
+  reset_defineProperty(this, "resetMethod", function () {
+    var resetBtn = _this._model._resetBtn;
+    var counterDisplay = _this._model._counterDisplay;
+    var factorialDis = _this._model._factorialDis;
+    var fibonacciDis = _this._model._fibonacciDis;
+    var binarySearchDisplay = _this._model._binarySearchDisplay;
+    var binaryTreeDisplay = _this._model._binaryTreeDisplay;
+    var linkedListDisplay = _this._model._linkedListDisplay;
+    var binaryTreeCompareDisplay = _this._model._binaryTreeCompareDisplay;
+    var linkedListCompareDisplay = _this._model._linkedListCompareDisplay;
+    var factorialValue = _this._model._factorialValue;
+    var fibonacciValue = _this._model._fibonacciValue;
+    var binaryTreeInputPush = _this._model._binaryTreeInputPush;
+    var binaryTreeInputFind = _this._model._binaryTreeInputFind;
+    var linkedListInputPush = _this._model._linkedListInputPush;
+    var linkedListInputFind = _this._model._linkedListInputFind;
+    var binarySearchInputHow = _this._model._binarySearchInputHow;
+    var binarySearchInputWhich = _this._model._binarySearchInputWhich;
+    resetBtn.addEventListener('click', function () {
+      counterDisplay.innerText = '0';
+      factorialDis.innerText = '';
+      fibonacciDis.innerText = '';
+      binarySearchDisplay.innerText = '';
+      binaryTreeDisplay.innerText = '';
+      linkedListDisplay.innerText = '';
+      binaryTreeCompareDisplay.innerText = 'Время поиска Binary tree collection';
+      linkedListCompareDisplay.innerText = 'Время поиска Linked List collection';
+      factorialValue.value = '';
+      fibonacciValue.value = '';
+      binaryTreeInputPush.value = '';
+      binaryTreeInputFind.value = '';
+      linkedListInputPush.value = '';
+      linkedListInputFind.value = '';
+      binarySearchInputHow.value = '';
+      binarySearchInputWhich.value = '';
+    });
+  });
+
+  this._model = new Model();
+};
+
+/* harmony default export */ var js_reset = (reset_Reset);
 // CONCATENATED MODULE: ./src/index.js
 
 
 
 
+
 var src_init = function init() {
+  var reset = new js_reset();
   var counter = new logic_Counter();
   var factorial = new logic_Factorial();
   var fibonacci = new logic_Fibonacci();
   var binarySearch = new logic_BinarySearch();
   var logicbinarytree = new logic_binary_tree();
+  reset.resetMethod();
   counter.counterMethod();
   factorial.factorialMethod();
   fibonacci.fibonacciMethod();
